@@ -1,5 +1,5 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto' , sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
@@ -13,7 +13,7 @@ header {
     padding: 0;
 }
 
-header h1 {
+header h1{
     background-color: #00509e;
     margin: 0;
     padding: 1rem 0;
@@ -22,9 +22,9 @@ header h1 {
 nav {
     display: flex;
     justify-content: space-around;
-    background-color: #003d73;
+    background-color: #003d73; /* Color azul más oscuro */
     padding: 1rem 0;
-    margin: 0;
+    margin: 0; /* Eliminamos cualquier margen */
 }
 
 nav a {
@@ -32,60 +32,24 @@ nav a {
     color: #fff;
     padding: .5rem 1rem;
 }
-
 main {
     max-width: 800px;
     margin: 2rem auto;
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 0;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
 }
 
 .card {
     background-color: #fff;
-    border: none;
-    border-radius: 0;
-    padding: 2rem;
-    box-shadow: none;
-    margin-bottom: 0;
-    border-bottom: 1px solid #e0e0e0;
-}
-
-.card:last-child {
-    border-bottom: none;
-}
-
-.card h2 {
-    font-size: 1.5rem;
-    color: #00509e;
-    margin-top: 0;
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid #00509e;
-    display: inline-block;
-}
-
-.card img {
-    max-width: 200px;
-    float: left;
-    margin: 0 1.5rem 1rem 0;
     border: 1px solid #ddd;
-}
-
-.card p {
-    line-height: 1.6;
-    text-align: justify;
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 footer {
     text-align: center;
     padding: 1rem;
     background-color: #ddd;
-}
-
-/* Clearfix para las imágenes flotantes */
-.card::after {
-    content: "";
-    display: table;
-    clear: both;
 }
