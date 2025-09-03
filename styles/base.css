@@ -1,97 +1,55 @@
-* {
+body {
+    font-family: 'Roboto' , sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-body {
     background-color: #f9f9f9;
     color: #333;
-    line-height: 1.6;
-    padding: 30px;
+}
+
+header {
+    text-align: center;
+    background-color: #00509e;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-around;
+    background-color: #003d73;
+    padding: 1rem 0;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #fff;
+    padding: .5rem 1rem;
+    transition: all .3s ease;
+}
+
+.navigation a:hover {
+    background-color: #00509e;
+    border-radius: 5px;
+}
+
+main {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
 }
 
-.container {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-}
-
-h1 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 25px;
-    color: #222;
-    border-bottom: 2px solid #e0e0e0;
-    padding-bottom: 15px;
-}
-
-h2 {
-    font-size: 20px;
-    font-weight: bold;
-    margin: 30px 0 15px 0;
-    color: #222;
-}
-
-h3 {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 25px 0 15px 0;
-    color: #444;
-}
-
-ul {
-    list-style-type: none;
-    margin: 15px 0 25px 0;
-    padding-left: 5px;
-}
-
-li {
-    margin-bottom: 8px;
-    padding-left: 15px;
-    text-indent: -15px;
-}
-
-li:before {
-    content: "- ";
-    font-weight: normal;
-}
-
-strong {
-    font-weight: bold;
-}
-
-p {
-    margin-bottom: 18px;
-    line-height: 1.6;
-}
-
-.divider {
-    height: 1px;
-    background-color: #e0e0e0;
-    margin: 30px 0;
-    width: 100%;
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 footer {
-    margin-top: 40px;
     text-align: center;
-    font-size: 14px;
-    color: #666;
-    border-top: 1px solid #e0e0e0;
-    padding-top: 20px;
-}
-
-.modification {
-    font-style: italic;
-    color: #888;
-    margin-top: 8px;
-}
-
-.copyright {
-    margin-bottom: 8px;
+    padding: 1rem;
+    background-color: #ddd;
 }
