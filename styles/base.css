@@ -10,9 +10,29 @@ header {
     text-align: center;
     background-color: #00509e;
     color: #fff;
-    padding: 1rem 0 0;
+    padding: 0;
 }
 
+header h1{
+    background-color: #00509e;
+    margin: 0;
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #003d73; /* Color azul más oscuro */
+    padding: 1rem 0;
+    margin: 0; /* Eliminamos cualquier margen */
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    padding: .5rem 1rem;
+}
+/*
 header nav{
     display: flex;
     justify-content: space-around;
@@ -33,12 +53,7 @@ header nav{
     padding: .5rem 1rem;
     transition: all .3s ease;
 }
-
-.navigation a:hover {
-    background-color: #00509e;
-    border-radius: 5px;
-}
-
+*/
 main {
     max-width: 800px;
     margin: 2rem auto;
