@@ -32,6 +32,13 @@ nav a {
     color: #fff;
     padding: .5rem 1rem;
 }
+
+nav a:hover {
+       background-color: #00509e;
+       border-radius: 5px;
+}
+
+
 main {
     max-width: 800px;
     margin: 2rem auto;
