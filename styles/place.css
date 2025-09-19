@@ -6,6 +6,7 @@
     --light-color: #F5F5F5;
     --dark-color: #2C3E50;
     --font-main: 'Roboto', sans-serif;
+    --overlay-bg: rgba(255, 255, 255, 0.85); /* Fondo semi-transparente */
 }
 
 * {
@@ -22,7 +23,7 @@ body {
 }
 
 header {
-    background: #87CEEB;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     padding: 2rem;
     text-align: center;
     border-bottom: 3px solid var(--secondary-color);
@@ -37,63 +38,57 @@ header h1 {
 
 .hero {
     width: 100%;
-    overflow: hidden;
     position: relative;
-    height: 60vh;
-    max-height: 500px;
+    height: 80vh; /* Mayor altura para la sección hero */
+    max-height: 800px;
+    overflow: hidden;
 }
 
 .hero-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
-.layout {
-    display: flex;
-    flex-direction: column;
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-    gap: 2rem;
-}
-
-.data, .weather {
-    flex: 1;
-}
-
-.data h2, .weather h2 {
-    color: var(--primary-color);
-    border-bottom: 2px solid var(--secondary-color);
-    padding-bottom: 0.5rem;
-    margin-bottom: 1.5rem;
-    position: relative;
-}
-
-.weather h2::after {
-    content: "⛅";
+/* Contenedor para las tarjetas superpuestas */
+.overlay-cards {
     position: absolute;
+    bottom: 40px;
+    left: 0;
     right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 20px;
+    flex-wrap: wrap; /* Permite que las tarjetas se apilen en pantallas pequeñas */
 }
 
-.info-card, .weather-card {
-    background-color: var(--accent-color);
-    border-radius: 8px;
+.data-card, .weather-card {
+    background-color: var(--overlay-bg);
+    border-radius: 12px;
     padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-left: 4px solid var(--primary-color);
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-top: 4px solid var(--primary-color);
+    backdrop-filter: blur(5px); /* Efecto de vidrio esmerilado */
 }
 
 .weather-card {
-    border-left-color: var(--secondary-color);
+    border-top-color: var(--secondary-color);
+}
+
+.data-card h2, .weather-card h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
     text-align: center;
 }
 
-.info-card h3, .weather-card h3 {
-    color: var(--secondary-color);
-    margin-top: 0;
-    margin-bottom: 1rem;
+.weather-content {
+    text-align: center;
 }
 
 .weather-icon {
@@ -113,7 +108,7 @@ header h1 {
 
 .data-list li {
     padding: 0.5rem 0;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .data-list strong {
@@ -127,30 +122,58 @@ footer {
     padding: 1.5rem;
     background-color: var(--dark-color);
     color: var(--accent-color);
-    margin-top: 3rem;
+    margin-top: 0; /* Ya no necesitamos margen superior porque el contenido está sobre la imagen */
 }
 
-/* Media Queries */
-@media (min-width: 768px) {
-    .layout {
-        flex-direction: row;
+/* Media Queries para responsividad */
+@media (max-width: 1024px) {
+    .overlay-cards {
+        bottom: 30px;
+        gap: 20px;
     }
     
-    .data {
-        flex: 2;
-    }
-    
-    .weather {
-        flex: 1;
+    .data-card, .weather-card {
+        max-width: 400px;
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .hero {
-        height: 40vh;
+        height: auto;
+        min-height: 600px;
+    }
+    
+    .overlay-cards {
+        position: relative;
+        bottom: 0;
+        padding: 20px;
+        gap: 20px;
+        background: linear-gradient(to bottom, transparent, var(--accent-color) 20%);
+    }
+    
+    .data-card, .weather-card {
+        max-width: 100%;
     }
     
     header h1 {
         font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .data-list strong {
+        width: 120px;
+    }
+    
+    .data-card, .weather-card {
+        padding: 1rem;
+    }
+    
+    header {
+        padding: 1.5rem;
+    }
+    
+    header h1 {
+        font-size: 1.8rem;
     }
 }
