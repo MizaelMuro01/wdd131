@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,11 +11,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script src="scripts/place.js" defer></script>
 </head>
+
 <body>
     <header>
         <h1>Morelos, México</h1>
     </header>
-    
+
     <main>
         <section class="hero">
             <picture>
@@ -22,7 +24,7 @@
                 <source media="(max-width: 1200px)" srcset="images/morelos-hor">
                 <img src="images/morelos-hor.jpg" alt="Morelos-horizontal" width="1200" height="600" class="hero-image">
             </picture>
-            
+
             <div class="overlay-container">
                 <div class="cards-wrapper">
                     <div class="data-card">
@@ -38,33 +40,39 @@
                             <p><strong>Dominio Internet:</strong> .mx</p>
                         </div>
                     </div>
-                    
+
                     <div class="weather-card">
                         <h2>Clima</h2>
                         <div class="weather-content">
                             <div class="weather-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48">
-                                    <path d="M6 13c2.76 0 5-2.24 5-5S8.76 3 6 3 1 5.24 1 8s2.24 5 5 5zm0-8c1.66 0 3 
-                                    1.34 3 3S7.66 11 6 11 3 9.66 3 8s1.34-3 3-3zm12 4c-2.76 0-5 2.24-5 5s2.24 5 5 5 
-                                    5-2.24 5-5-2.24-5-5-5zm0 8c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z" fill="currentColor"/>
-                                    <circle cx="6" cy="8" r="1" fill="currentColor"/>
-                                    <circle cx="18" cy="13" r="1" fill="currentColor"/>
+                                    <circle cx="12" cy="12" r="5" fill="#D4AF37" />
+                                    <path
+                                        d="M12 3v2M12 19v2M3 12h2M19 12h2M5.64 5.64l1.41 1.41M16.95 16.95l1.41 1.41M5.64 
+                                        18.36l1.41-1.41M16.95 7.05l1.41-1.41"
+                                        stroke="#D4AF37" stroke-width="2" />
+                                    <path
+                                        d="M20 15c0-1.1-.9-2-2-2--.3-1.9-1.8-3.3-3.7-3.3-1.5 0-2.8.8-3.5 2-1.0-.6-2.
+                                        2-1-3.5-1-2.8 0-5 2.2-5 5s2.2 5 5 5h13c1.1 0 2-.9 2-2z"
+                                        fill="#87CEEB" />
                                 </svg>
                             </div>
-                            <p><strong>Temperatura:</strong> <span id="temperature">25</span>°C</p>
-                            <p><strong>Condiciones:</strong> Parcialmente Nublado</p>
-                            <p><strong>Viento:</strong> <span id="wind-speed">5</span> km/h</p>
-                            <p><strong>Sensación Térmica:</strong> <span id="wind-chill">N/A</span></p>
                         </div>
+                        <p><strong>Temperatura:</strong> <span id="temperature">25</span>°C</p>
+                        <p><strong>Condiciones:</strong> Parcialmente Nublado</p>
+                        <p><strong>Viento:</strong> <span id="wind-speed">5</span> km/h</p>
+                        <p><strong>Sensación Térmica:</strong> <span id="wind-chill">N/A</span></p>
                     </div>
                 </div>
             </div>
+            </div>
         </section>
     </main>
-    
+
     <footer>
         <p>&copy; <span id="currentyear"></span> Mizael Muro, México</p>
         <p id="lastModified"></p>
     </footer>
 </body>
+
 </html>
