@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Morelos, México</title>
+    <title>Morelos, México - Tierra de Eterna Primavera</title>
     <meta name="description" content="Morelos">
     <meta name="author" content="Mizael Muro">
     <link rel="stylesheet" href="styles/place.css">
@@ -22,21 +22,46 @@
                 <source media="(max-width: 1200px)" srcset="images/morelos-medium.webp">
                 <img src="images/morelos-hor.jpg" alt="Morelos-horizontal" width="1200" height="600" class="hero-image">
             </picture>
-
+            
+            <!-- Contenedor para las tarjetas superpuestas -->
             <div class="overlay-cards">
                 <div class="data-card">
                     <h2>Datos</h2>
                     <div class="info-content">
-                        <ul class="data-list">
-                            <li><strong>Área:</strong> 4,893 km²</li>
-                            <li><strong>Población:</strong> 1,971,520</li>
-                            <li><strong>Capital:</strong> Cuernavaca</li>
-                            <li><strong>Idiomas:</strong> Español, Náhuatl</li>
-                            <li><strong>Moneda:</strong> Peso Mexicano (MXN)</li>
-                            <li><strong>Zona Horaria:</strong> UTC-6</li>
-                            <li><strong>Código de País:</strong> +52</li>
-                            <li><strong>Dominio Internet:</strong> .mx</li>
-                        </ul>
+                        <table class="info-table">
+                            <tr>
+                                <td><strong>Área:</strong></td>
+                                <td>4,893 km²</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Población:</strong></td>
+                                <td>1,971,520</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Capital:</strong></td>
+                                <td>Cuernavaca</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Idiomas:</strong></td>
+                                <td>Español, Náhuatl</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Moneda:</strong></td>
+                                <td>Peso Mexicano (MXN)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Zona Horaria:</strong></td>
+                                <td>UTC-6</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Código de País:</strong></td>
+                                <td>+52</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Dominio Internet:</strong></td>
+                                <td>.mx</td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
                 
@@ -50,12 +75,24 @@
                                 <circle cx="18" cy="13" r="1" fill="currentColor"/>
                             </svg>
                         </div>
-                        <ul class="data-list">
-                            <li><strong>Temperatura:</strong> <span id="temperature">25</span>°C</li>
-                            <li><strong>Condiciones:</strong> Parcialmente Nublado</li>
-                            <li><strong>Viento:</strong> <span id="wind-speed">5</span> km/h</li>
-                            <li><strong>Sensación Térmica:</strong> <span id="wind-chill">N/A</span></li>
-                        </ul>
+                        <table class="info-table">
+                            <tr>
+                                <td><strong>Temperatura:</strong></td>
+                                <td><span id="temperature">25</span>°C</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Condiciones:</strong></td>
+                                <td>Parcialmente Nublado</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Viento:</strong></td>
+                                <td><span id="wind-speed">5</span> km/h</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Sensación Térmica:</strong></td>
+                                <td><span id="wind-chill">N/A</span></td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             </div>
