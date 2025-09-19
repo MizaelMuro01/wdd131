@@ -94,11 +94,11 @@ main {
 }
 
 .cards-wrapper {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-    justify-content: center;
+    background-color: var(--overlay-bg);
+    border: 1px solid #cccccc7e;
+    padding: 1.5rem;
     width: 100%;
+    max-width: 450px;
 }
 
 /* TARJETAS SIMPLIFICADAS (solo esto cambia) */
