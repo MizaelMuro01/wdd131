@@ -81,27 +81,20 @@ main {
     width: 100%;
 }
 
+/* TARJETAS SIMPLIFICADAS (solo esto cambia) */
 .data-card, .weather-card {
     background-color: var(--overlay-bg);
-    border-radius: 12px;
-    padding: 1.8rem;
+    border: 1px solid #ccc;
+    padding: 1.5rem;
     width: 100%;
     max-width: 450px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    border-top: 5px solid var(--primary-color);
-}
-
-.weather-card {
-    border-top-color: var(--secondary-color);
 }
 
 .data-card h2, .weather-card h2 {
     color: var(--primary-color);
-    border-bottom: 2px solid var(--secondary-color);
-    padding-bottom: 0.8rem;
-    margin-bottom: 1.5rem;
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
     text-align: center;
-    font-size: 1.8rem;
 }
 
 .weather-content {
@@ -110,7 +103,7 @@ main {
 
 .weather-icon {
     color: var(--secondary-color);
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
 }
 
 .weather-icon svg {
@@ -119,20 +112,16 @@ main {
 }
 
 .info-content p, .weather-content p {
-    padding: 0.5rem 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    margin: 0.8rem 0;
-}
-
-.info-content p:last-child, .weather-content p:last-child {
-    border-bottom: none;
+    margin: 0.7rem 0;
 }
 
 .info-content strong, .weather-content strong {
     color: var(--primary-color);
     display: inline-block;
-    min-width: 140px;
+    width: 140px;
 }
+
+/* Fin de tarjetas simplificadas */
 
 footer {
     text-align: center;
@@ -155,11 +144,11 @@ footer {
     
     .data-card, .weather-card {
         max-width: 400px;
-        padding: 1.5rem;
+        padding: 1.2rem;
     }
     
     .data-card h2, .weather-card h2 {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
 }
 
@@ -178,13 +167,11 @@ footer {
     .overlay-container {
         position: relative;
         padding: 20px 15px;
-        background: linear-gradient(to bottom, transparent, var(--accent-color) 10%);
     }
     
     .data-card, .weather-card {
         max-width: 100%;
         margin-bottom: 20px;
-        background-color: rgba(255, 255, 255, 0.98);
     }
     
     header h1 {
@@ -192,11 +179,11 @@ footer {
     }
     
     .data-card h2, .weather-card h2 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
     
     .info-content strong, .weather-content strong {
-        min-width: 120px;
+        width: 120px;
     }
 }
 
@@ -210,16 +197,16 @@ footer {
     }
     
     .data-card, .weather-card {
-        padding: 1.2rem;
+        padding: 1rem;
     }
     
     .data-card h2, .weather-card h2 {
-        font-size: 1.4rem;
-        margin-bottom: 1rem;
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
     }
     
     .info-content strong, .weather-content strong {
-        min-width: 110px;
+        width: 110px;
         display: block;
         margin-bottom: 0.2rem;
     }
@@ -232,17 +219,13 @@ footer {
     footer {
         padding: 1.2rem;
     }
-    
-    .info-content p, .weather-content p {
-        padding: 0.6rem 0;
-    }
 }
 
 /* Estilos específicos para asegurar que todo el contenido sea visible */
 .hero {
-    background-color: var(--primary-color); /* Color de fondo en caso de que la imagen no cargue */
+    background-color: var(--primary-color);
 }
 
 .hero-image {
-    background-color: var(--primary-color); /* Color de fondo para la imagen */
+    background-color: var(--primary-color);
 }
