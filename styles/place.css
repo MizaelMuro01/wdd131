@@ -84,14 +84,14 @@ main {
 /* TARJETAS SIMPLIFICADAS (solo esto cambia) */
 .data-card, .weather-card {
     background-color: var(--overlay-bg);
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc7e;
     padding: 1.5rem;
     width: 100%;
     max-width: 450px;
 }
 
 .data-card h2, .weather-card h2 {
-    color: var(--primary-color);
+    color: #333333;
     margin: 0 0 1rem 0;
     font-size: 1.5rem;
     text-align: center;
