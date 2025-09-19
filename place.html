@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morelos, México - Tierra de Eterna Primavera</title>
+    <meta name="description" content="Descubre Morelos, México - su cultura, clima y belleza natural">
+    <meta name="author" content="Mizael Muro">
+    <link rel="stylesheet" href="styles/place.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Morelos, México</h1>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <picture>
+                <source media="(max-width: 600px)" srcset="images/morelos-small.webp">
+                <source media="(max-width: 1200px)" srcset="images/morelos-medium.webp">
+                <img src="images/morelos-large.webp" alt="Vista panorámica de Morelos" width="1200" height="600" class="hero-image">
+            </picture>
+        </section>
+        
+        <div class="layout">
+            <section class="data">
+                <h2>Datos</h2>
+                <div class="info-card">
+                    <ul class="data-list">
+                        <li><strong>Área:</strong> 4,893 km²</li>
+                        <li><strong>Población:</strong> 1,971,520</li>
+                        <li><strong>Capital:</strong> Cuernavaca</li>
+                        <li><strong>Idiomas:</strong> Español, Náhuatl</li>
+                        <li><strong>Moneda:</strong> Peso Mexicano (MXN)</li>
+                        <li><strong>Zona Horaria:</strong> UTC-6</li>
+                        <li><strong>Código de País:</strong> +52</li>
+                        <li><strong>Dominio Internet:</strong> .mx</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section class="weather">
+                <h2>Clima</h2>
+                <div class="weather-card">
+                    <div class="weather-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48">
+                            <path d="M6 13c2.76 0 5-2.24 5-5S8.76 3 6 3 1 5.24 1 8s2.24 5 5 5zm0-8c1.66 0 3 1.34 3 3S7.66 11 6 11 3 9.66 3 8s1.34-3 3-3zm12 4c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 8c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z" fill="currentColor"/>
+                            <circle cx="6" cy="8" r="1" fill="currentColor"/>
+                            <circle cx="18" cy="13" r="1" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <ul class="data-list">
+                        <li><strong>Temperatura:</strong> <span id="temperature">25</span>°C</li>
+                        <li><strong>Condiciones:</strong> Parcialmente Nublado</li>
+                        <li><strong>Viento:</strong> <span id="wind-speed">5</span> km/h</li>
+                        <li><strong>Sensación Térmica:</strong> <span id="wind-chill">N/A</span></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Mizael Muro, México</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
