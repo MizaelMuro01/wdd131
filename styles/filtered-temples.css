@@ -8,7 +8,7 @@ body {
 
 header {
     align-items: center;
-    background-color: #bbb;
+    background-color: #00509e; /* Mismo azul que el título */
     display: flex;
     padding: 20px;
     border: 1px solid rgba(0,0,0,0.1);
@@ -38,7 +38,7 @@ nav a {
     padding: 1rem;
     text-decoration: none;
     cursor: pointer;
-    transition: all 0.3s ease;
+    /* QUITAMOS la transición y efectos hover */
 }
 
 nav a.active {
@@ -47,10 +47,12 @@ nav a.active {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
+/* QUITAMOS completamente los efectos hover del nav */
 nav a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-left: 3px solid #fff;
-    border-right: 3px solid #fff;
+    /* Sin cambios - se quitan los efectos */
+    background-color: transparent;
+    border-left: none;
+    border-right: none;
 }
 
 main {
@@ -79,12 +81,13 @@ main {
     border-radius: 8px;
     padding: 1.5rem;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* QUITAMOS la transición y efectos hover */
 }
 
+/* QUITAMOS completamente los efectos hover de las tarjetas */
 .temple-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    transform: none; /* Sin movimiento */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Misma sombra */
 }
 
 .temple-card h2 {
