@@ -8,7 +8,7 @@ body {
 
 header {
     align-items: center;
-    background-color: #00509e; /* Mismo azul que el título */
+    background-color: #00509e;
     display: flex;
     padding: 20px;
     border: 1px solid rgba(0,0,0,0.1);
@@ -38,7 +38,6 @@ nav a {
     padding: 1rem;
     text-decoration: none;
     cursor: pointer;
-    /* QUITAMOS la transición y efectos hover */
 }
 
 nav a.active {
@@ -47,9 +46,8 @@ nav a.active {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* QUITAMOS completamente los efectos hover del nav */
 nav a:hover {
-    /* Sin cambios - se quitan los efectos */
+
     background-color: transparent;
     border-left: none;
     border-right: none;
@@ -81,13 +79,11 @@ main {
     border-radius: 8px;
     padding: 1.5rem;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    /* QUITAMOS la transición y efectos hover */
 }
 
-/* QUITAMOS completamente los efectos hover de las tarjetas */
 .temple-card:hover {
-    transform: none; /* Sin movimiento */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Misma sombra */
+    transform: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .temple-card h2 {
@@ -121,7 +117,6 @@ footer {
     margin-top: 2rem;
 }
 
-/* Media Queries para responsividad */
 @media (max-width: 768px) {
     .gallery-container {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));

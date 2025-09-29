@@ -1,22 +1,21 @@
-// Función principal que se ejecuta al cargar la página
 document.addEventListener('DOMContentLoaded', function() {
     console.log("✅ Página cargada - JavaScript iniciado");
     
-    // Actualizar año actual
+    // Año actual
     const currentYear = new Date();
     document.getElementById("currentyear").textContent = currentYear.getFullYear();
     
-    // Actualizar última modificación
+    // ultima modificacion footer
     document.getElementById("lastModified").textContent = `Last Modification: ${document.lastModified}`;
 
-    // Configurar navegación
+    // navegation settings
     setupNavigation();
     
-    // Inicializar con todos los templos
+    // home all temples
     displayTemples('home');
 });
 
-// Array de objetos de templos - CON URLs QUE SÍ FUNCIONAN
+// alllllll templeees with link
 const temples = [
     {
         templeName: "Aba Nigeria",
@@ -76,7 +75,7 @@ const temples = [
     }
 ];
 
-// Función para crear una tarjeta de templo
+// temple card
 function createTempleCard(temple) {
     console.log(`🖼️ Creando tarjeta para: ${temple.templeName}`);
     
@@ -96,7 +95,7 @@ function createTempleCard(temple) {
     return card;
 }
 
-// Función para mostrar templos según el filtro
+// Filter
 function displayTemples(filter = 'home') {
     console.log(`🔍 Aplicando filtro: ${filter}`);
     
@@ -144,7 +143,7 @@ function displayTemples(filter = 'home') {
     });
 }
 
-// Función para manejar la navegación y filtros
+// Filter wirh navegation
 function setupNavigation() {
     console.log("🔗 Configurando navegación...");
     
@@ -155,17 +154,17 @@ function setupNavigation() {
         link.addEventListener('click', (e) => {
             e.preventDefault();
             
-            // Remover clase active de todos los enlaces
+            // Remove class
             navLinks.forEach(l => l.classList.remove('active'));
             
-            // Agregar clase active al enlace clickeado
+            // Add class
             link.classList.add('active');
             
-            // Obtener el filtro del atributo data-filter
+            // data-filter
             const filter = link.dataset.filter;
             console.log(`🎯 Filtro seleccionado: ${filter}`);
             
-            // Mostrar templos según el filtro
+            // show temples bby filter
             displayTemples(filter);
         });
     });
