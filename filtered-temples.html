@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Álbum de Templos - Mizael Muro</title>
+    <meta name="description" content="Álbum de Templos con filtros - Mizael Muro">
+    <meta name="author" content="Mizael Muro">
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Álbum de Templos</h1>
+    </header>
+    <nav class="navigation">
+        <a href="#" class="active" data-filter="home">Home</a>
+        <a href="#" data-filter="old">Old</a>
+        <a href="#" data-filter="new">New</a>
+        <a href="#" data-filter="large">Large</a>
+        <a href="#" data-filter="small">Small</a>
+    </nav>
+    <main>
+        <h2 class="gallery-title">Galería de Templos</h2>
+        <div id="temple-container" class="gallery-container">
+            <!-- Las tarjetas de templos se generarán aquí con JavaScript -->
+        </div>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Mizael Muro, Mexico.</p>
+        <p id="lastModified"></p>
+    </footer>
+    <script src="scripts/filtered-temples.js"></script>
+</body>
+
+</html>
