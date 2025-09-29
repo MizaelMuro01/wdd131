@@ -1,5 +1,7 @@
 // Función principal que se ejecuta al cargar la página
 document.addEventListener('DOMContentLoaded', function() {
+    console.log("Página cargada - Iniciando JavaScript");
+    
     // Actualizar año actual
     const currentYear = new Date();
     document.getElementById("currentyear").textContent = currentYear.getFullYear();
@@ -14,77 +16,77 @@ document.addEventListener('DOMContentLoaded', function() {
     displayTemples('home');
 });
 
-// Array de objetos de templos - CON NOMBRES EXACTOS DE TUS IMÁGENES
+// Array de objetos de templos - CON NOMBRES REALES Y EXTENSIONES CORRECTAS
 const temples = [
     {
         templeName: "Aba Nigeria",
         location: "Aba, Nigeria",
         dedicated: "2005, August, 7",
         area: 11500,
-        imageUrl: "images/aba-nigeria.webp"
+        imageUrl: "images/nigeria-temple.jpg"
     },
     {
         templeName: "Manti Utah",
         location: "Manti, Utah, United States",
         dedicated: "1888, May, 21",
         area: 74792,
-        imageUrl: "images/manti-utah.webp"
+        imageUrl: "images/manti-temple.jpg"
     },
     {
         templeName: "Payson Utah",
         location: "Payson, Utah, United States",
         dedicated: "2015, June, 7",
         area: 96630,
-        imageUrl: "images/payson-utah.webp"
+        imageUrl: "images/payson-temple.jpeg"
     },
     {
         templeName: "Yigo Guam",
         location: "Yigo, Guam",
         dedicated: "2020, May, 2",
         area: 6861,
-        imageUrl: "images/yigo-guam.webp"
+        imageUrl: "images/yigo-temple.jpg"
     },
     {
         templeName: "Washington D.C.",
         location: "Kensington, Maryland, United States",
         dedicated: "1974, November, 19",
         area: 156558,
-        imageUrl: "images/washington-dc.webp"
+        imageUrl: "images/washington-temple.jpg"
     },
     {
         templeName: "Lima Perú",
         location: "Lima, Perú",
         dedicated: "1986, January, 10",
         area: 9600,
-        imageUrl: "images/lima-peru.webp"
+        imageUrl: "images/peru-temple.jpg"
     },
     {
         templeName: "Mexico City Mexico",
         location: "Mexico City, Mexico",
         dedicated: "1983, December, 2",
         area: 116642,
-        imageUrl: "images/mexico-city-mexico.webp"
+        imageUrl: "images/cdmx-temple.jpg"
     },
     {
         templeName: "Salt Lake City Utah",
         location: "Salt Lake City, Utah, United States",
         dedicated: "1893, April, 6",
         area: 253000,
-        imageUrl: "images/salt-lake-city-utah.webp"
+        imageUrl: "images/manti-temple.jpg" // Usar manti como placeholder
     },
     {
         templeName: "São Paulo Brazil",
         location: "São Paulo, Brazil",
         dedicated: "1978, October, 30",
         area: 59246,
-        imageUrl: "images/sao-paulo-brazil.webp"
+        imageUrl: "images/morelos-hor.jpg" // Usar morelos como placeholder
     },
     {
         templeName: "Rome Italy",
         location: "Rome, Italy",
         dedicated: "2019, March, 10",
         area: 40000,
-        imageUrl: "images/rome-italy.webp"
+        imageUrl: "images/reynosa-temple.jpg" // Usar reynosa como placeholder
     }
 ];
 
@@ -98,7 +100,7 @@ function createTempleCard(temple) {
     card.innerHTML = `
         <h2>${temple.templeName}</h2>
         <img src="${temple.imageUrl}" alt="${temple.templeName}" class="temple-image" loading="lazy"
-             onerror="console.error('Error cargando imagen: ${temple.imageUrl}')">
+             onerror="console.error('ERROR: No se pudo cargar la imagen: ${temple.imageUrl}')">
         <div class="temple-info"><strong>Ubicación:</strong> ${temple.location}</div>
         <div class="temple-info"><strong>Dedicado:</strong> ${temple.dedicated}</div>
         <div class="temple-info"><strong>Área:</strong> ${temple.area.toLocaleString()} sq ft</div>
@@ -111,7 +113,7 @@ function createTempleCard(temple) {
 function displayTemples(filter = 'home') {
     const container = document.getElementById('temple-container');
     if (!container) {
-        console.error("No se encontró el contenedor con id 'temple-container'");
+        console.error("ERROR: No se encontró el contenedor con id 'temple-container'");
         return;
     }
     
