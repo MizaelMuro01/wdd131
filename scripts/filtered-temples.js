@@ -21,14 +21,14 @@ const temples = [
         location: "Aba, Nigeria",
         dedicated: "2005, August, 7",
         area: 11500,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg"
+        imageUrl: "images\nigeria-temple.jpg"
     },
     {
         templeName: "Manti Utah",
         location: "Manti, Utah, United States",
         dedicated: "1888, May, 21",
         area: 74792,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manti-utah/400x250/manti-utah-temple-768192-wallpaper.jpg"
+        imageUrl: "C:\Users\mizae\OneDrive\Documentos\wdd131\wdd131\images\nigeria-temple.jpg"
     },
     {
         templeName: "Payson Utah",
