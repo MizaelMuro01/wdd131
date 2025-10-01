@@ -1,51 +1,193 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yonkett</title>
-    <meta name="description" content="Yonkett Page Web - Mizael Muro">
-    <meta name="author" content="Mizael Muro">
-    <link rel="stylesheet" href="siteplan.css">
-    <script src="siteplan.js" defer></script>
+    <title>Yonkett - Website Planning Document</title>
+    <link rel="stylesheet" href="styles/siteplan.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <header>
-        <h1>Wdd 131 siteplan</h1>
+        <div class="container">
+            <h1>Yonkett - Website Planning Document</h1>
+            <nav>
+                <ul>
+                    <li><a href="#site-name">Site Name</a></li>
+                    <li><a href="#site-purpose">Site Purpose</a></li>
+                    <li><a href="#scenarios">Scenarios</a></li>
+                    <li><a href="#color-schema">Color Schema</a></li>
+                    <li><a href="#typography">Typography</a></li>
+                    <li><a href="#wireframe">Wireframe</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <nav class="navigation">
-        <a href="https://www.linkedin.com/in/mizael-muro-509421250/">Linkedin Website</a>
-        <a href="https://byupw.instructure.com/">Canvas Website</a>
-        <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/luke/22?lang=eng&id=p26#p26">Full Truth
-            Website</a>
-        <a href="">Final Project</a>
-    </nav>
-    <main>
-        <section class="card">
-            <h2>About Me</h2>
-            <img src="images\wireframe-yonkett.png" alt="Profile Image">
-            <p>I'm Mizael Muro, and I'm from Matamoros, Tamaulipas, Mexico. I enjoy learning and going fishing. I'm the
-                youngest in a small family, with one sister and one brother. I really like watching good movies. I'm a
-                student at two universities and I work selling auto parts. In my free time, I enjoy working on my own
-                startup, which I plan to launch the MVP for in October 2025.</p>
+
+    <main class="container">
+        <!-- Site Name Section -->
+        <section id="site-name" class="section-card">
+            <h2>Site Name</h2>
+            <div class="content">
+                <p><strong>Nombre del sitio:</strong> Yonkett</p>
+                <p><strong>Descripción:</strong> Yonkett representa una plataforma moderna y dinámica para la gestión de perfiles de vehículos. El nombre evoca conexión y tecnología, ideal para una aplicación que conecta a los usuarios con la gestión inteligente de sus automóviles.</p>
+                <p><strong>Dominio disponible:</strong> yonkett.app</p>
+            </div>
         </section>
-        <section class="card">
-            <h2>México</h2>
-            <img src="image" alt="mexico Image">
-            <p>Mexico, officially the United Mexican States, is a country in North America with a rich culture, one of
-                the most appreciated cuisines in the world, and exceptional biodiversity. It is known for its history as
-                the homeland of ancient civilizations, which left legacies in sites such as the Great Pyramid of
-                Cholula, the largest pyramid in the world by volume. Globally, it is the 11th most populous country and
-                holds a prominent position among emerging economies and in the number of UNESCO World Heritage Sites.
-            </p>
+
+        <!-- Site Purpose Section -->
+        <section id="site-purpose" class="section-card">
+            <h2>Site Purpose</h2>
+            <div class="content">
+                <p>Yonkett es una plataforma web que permite a los usuarios crear y gestionar múltiples perfiles de vehículos, proporcionando:</p>
+                <ul>
+                    <li>Gestión centralizada de información de automóviles</li>
+                    <li>Seguimiento de mantenimiento y gastos</li>
+                    <li>Comunidad para compartir experiencias entre propietarios</li>
+                    <li>Acceso a información técnica y recomendaciones</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Scenarios Section -->
+        <section id="scenarios" class="section-card">
+            <h2>Scenarios</h2>
+            <div class="content">
+                <p>Preguntas que los visitantes del sitio podrían hacer:</p>
+                <div class="scenarios-list">
+                    <div class="scenario-item">
+                        <h3>¿Cómo funciona la plataforma?</h3>
+                        <p>Los usuarios querrán entender el proceso de registro y uso de las funciones principales.</p>
+                    </div>
+                    <div class="scenario-item">
+                        <h3>¿Por qué no hay un marketplace integrado?</h3>
+                        <p>Los visitantes pueden esperar funciones de compra/venta y necesitarán entender el enfoque específico de la plataforma.</p>
+                    </div>
+                    <div class="scenario-item">
+                        <h3>¿Puedo tener dos o más perfiles de coche?</h3>
+                        <p>Usuarios con múltiples vehículos necesitarán gestionarlos de manera individual.</p>
+                    </div>
+                    <div class="scenario-item">
+                        <h3>¿Cuándo tendré la aplicación completa?</h3>
+                        <p>Los usuarios querrán conocer el roadmap de desarrollo y las funciones futuras.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Color Schema Section -->
+        <section id="color-schema" class="section-card">
+            <h2>Color Schema</h2>
+            <div class="content">
+                <div class="color-palette">
+                    <div class="color-item primary-color">
+                        <div class="color-sample"></div>
+                        <div class="color-info">
+                            <h4>Azul Principal (#2563EB)</h4>
+                            <p>Usado en: Encabezados, botones principales, enlaces y elementos de navegación</p>
+                        </div>
+                    </div>
+                    <div class="color-item secondary-color">
+                        <div class="color-sample"></div>
+                        <div class="color-info">
+                            <h4>Gris Oscuro (#1F2937)</h4>
+                            <p>Usado en: Texto del cuerpo, fondos de secciones y bordes</p>
+                        </div>
+                    </div>
+                    <div class="color-item accent-color">
+                        <div class="color-sample"></div>
+                        <div class="color-info">
+                            <h4>Verde Acento (#10B981)</h4>
+                            <p>Usado en: Elementos de éxito, confirmaciones y estados positivos</p>
+                        </div>
+                    </div>
+                    <div class="color-item background-color">
+                        <div class="color-sample"></div>
+                        <div class="color-info">
+                            <h4>Blanco Hueso (#F8FAFC)</h4>
+                            <p>Usado en: Fondo principal de la página y tarjetas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Typography Section -->
+        <section id="typography" class="section-card">
+            <h2>Typography</h2>
+            <div class="content">
+                <div class="font-examples">
+                    <div class="font-item primary-font">
+                        <h3>Montserrat</h3>
+                        <p class="font-regular">Regular 400: Usado en texto del cuerpo y contenido principal</p>
+                        <p class="font-semibold">Semibold 600: Usado en subtítulos y elementos importantes</p>
+                        <p class="font-bold">Bold 700: Usado en encabezados y títulos principales</p>
+                    </div>
+                    <div class="font-item secondary-font">
+                        <h3>Open Sans</h3>
+                        <p class="font-light">Light 300: Usado en texto secundario y descripciones</p>
+                        <p class="font-regular">Regular 400: Usado en navegación y elementos de interfaz</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wireframe Section -->
+        <section id="wireframe" class="section-card">
+            <h2>Wireframe</h2>
+            <div class="content">
+                <div class="wireframe-container">
+                    <div class="wireframe-item">
+                        <h3>Mobile View</h3>
+                        <div class="wireframe-mockup mobile">
+                            <div class="mockup-header">Header with Logo</div>
+                            <div class="mockup-nav">Navigation Menu</div>
+                            <div class="mockup-hero">Hero Section</div>
+                            <div class="mockup-content">
+                                <h4>How it works?</h4>
+                                <p>Brief explanation of platform functionality...</p>
+                            </div>
+                            <div class="mockup-content">
+                                <h4>Why there is not a marketplace?</h4>
+                                <p>Explanation of platform focus...</p>
+                            </div>
+                            <div class="mockup-footer">Footer with Social Media</div>
+                        </div>
+                    </div>
+                    <div class="wireframe-item">
+                        <h3>Desktop View</h3>
+                        <div class="wireframe-mockup desktop">
+                            <div class="mockup-header">Header with Logo and Navigation</div>
+                            <div class="mockup-hero">Hero Section</div>
+                            <div class="mockup-content-grid">
+                                <div class="content-column">
+                                    <h4>How it works?</h4>
+                                    <p>Detailed explanation...</p>
+                                </div>
+                                <div class="content-column">
+                                    <h4>Multiple Car Profiles</h4>
+                                    <p>Feature description...</p>
+                                </div>
+                            </div>
+                            <div class="mockup-footer">Footer Content</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
-    <footer>
-        <p>&copy; <span id="currentyear"></span> Mizael Muro, Mexico.</p>
-        <p id="lastModified"></p>
-    </footer>
-</body>
 
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Yonkett - Website Planning Document</p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook">📘</a>
+                <a href="#" aria-label="Twitter">🐦</a>
+                <a href="#" aria-label="Instagram">📷</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/siteplan.js"></script>
+</body>
 </html>
