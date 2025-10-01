@@ -1,7 +1,7 @@
-// JavaScript para funcionalidades interactivas del documento de planificación
+// JavaScript for website planning document features
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Smooth scrolling para navegación
+    // Smooth scrolling for navigation
     const navLinks = document.querySelectorAll('nav a[href^="#"]');
     
     navLinks.forEach(link => {
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Highlight de sección activa en navegación
+    // Highlight active section in navigation
     const sections = document.querySelectorAll('section[id]');
     
     function highlightActiveSection() {
@@ -30,122 +30,102 @@ document.addEventListener('DOMContentLoaded', function() {
             const sectionHeight = section.offsetHeight;
             const sectionTop = section.offsetTop - 100;
             const sectionId = section.getAttribute('id');
+            const navLink = document.querySelector(`nav a[href="#${sectionId}"]`);
             
             if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                document.querySelector(`nav a[href="#${sectionId}"]`).classList.add('active');
+                navLink.classList.add('active');
             } else {
-                document.querySelector(`nav a[href="#${sectionId}"]`).classList.remove('active');
+                navLink.classList.remove('active');
             }
         });
     }
 
     window.addEventListener('scroll', highlightActiveSection);
 
-    // Animación para las tarjetas de sección
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, observerOptions);
-
-    // Aplicar estilos iniciales y observar secciones
-    sections.forEach(section => {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(20px)';
-        section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(section);
-    });
-
-    // Funcionalidad para mostrar/ocultar detalles en wireframes
-    const wireframeSections = document.querySelectorAll('.mockup-content');
-    
-    wireframeSections.forEach(section => {
-        section.addEventListener('click', function() {
-            this.classList.toggle('expanded');
-        });
-    });
-
-    // Contador de visitas usando localStorage
+    // Visit counter using localStorage
     function updateVisitCount() {
-        let visitCount = localStorage.getItem('sitePlanVisits') || 0;
+        let visitCount = localStorage.getItem('yonkettSitePlanVisits') || 0;
         visitCount = parseInt(visitCount) + 1;
-        localStorage.setItem('sitePlanVisits', visitCount);
+        localStorage.setItem('yonkettSitePlanVisits', visitCount);
         
-        // Mostrar contador discretamente en el footer
+        // Show counter in footer
         const visitCounter = document.createElement('p');
-        visitCounter.textContent = `Documento visto ${visitCount} veces`;
+        visitCounter.textContent = `Document viewed ${visitCount} times`;
         visitCounter.style.fontSize = '0.8rem';
-        visitCounter.style.color = 'var(--light-text)';
+        visitCounter.style.color = '#4C4C4C';
         visitCounter.style.marginTop = '0.5rem';
+        visitCounter.style.fontFamily = 'Montserrat, sans-serif';
         
         const footer = document.querySelector('footer .container');
+        // Remove old counter if exists
+        const oldCounter = footer.querySelector('.visit-counter');
+        if (oldCounter) {
+            oldCounter.remove();
+        }
+        visitCounter.classList.add('visit-counter');
         footer.appendChild(visitCounter);
     }
 
     updateVisitCount();
 
-    // Validación de formularios (si se añaden en el futuro)
-    function setupFormValidation() {
-        const forms = document.querySelectorAll('form');
-        
-        forms.forEach(form => {
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                const inputs = this.querySelectorAll('input[required], textarea[required]');
-                let isValid = true;
-                
-                inputs.forEach(input => {
-                    if (!input.value.trim()) {
-                        isValid = false;
-                        input.style.borderColor = 'red';
-                    } else {
-                        input.style.borderColor = '';
-                    }
-                });
-                
-                if (isValid) {
-                    this.submit();
-                }
-            });
+    // Add click effects to wireframe elements
+    const wireframeElements = document.querySelectorAll('.wireframe-mockup > div');
+    
+    wireframeElements.forEach(element => {
+        element.addEventListener('click', function() {
+            this.style.transform = 'scale(0.98)';
+            this.style.transition = 'transform 0.2s ease';
+            
+            setTimeout(() => {
+                this.style.transform = 'scale(1)';
+            }, 200);
         });
+    });
+
+    // Print document function
+    function setupPrintButton() {
+        const printButton = document.createElement('button');
+        printButton.textContent = 'Print Document';
+        printButton.style.position = 'fixed';
+        printButton.style.bottom = '20px';
+        printButton.style.right = '20px';
+        printButton.style.padding = '10px 15px';
+        printButton.style.backgroundColor = '#FA0001';
+        printButton.style.color = 'white';
+        printButton.style.border = 'none';
+        printButton.style.borderRadius = '5px';
+        printButton.style.cursor = 'pointer';
+        printButton.style.fontFamily = 'Montserrat, sans-serif';
+        printButton.style.fontWeight = '500';
+        printButton.style.zIndex = '1000';
+        
+        printButton.addEventListener('click', function() {
+            window.print();
+        });
+        
+        document.body.appendChild(printButton);
     }
 
-    // Inicializar validación de formularios si existen
-    if (document.querySelector('form')) {
-        setupFormValidation();
-    }
+    setupPrintButton();
 
-    // Console log para desarrollo
-    console.log('Yonkett Website Planning Document cargado correctamente');
-    console.log('Características implementadas:');
-    console.log('- Navegación suave entre secciones');
-    console.log('- Highlight de sección activa');
-    console.log('- Animaciones al hacer scroll');
-    console.log('- Contador de visitas con localStorage');
+    // Console message for development
+    console.log('Yonkett Website Planning Document loaded successfully');
+    console.log('Features active:');
+    console.log('- Smooth navigation between sections');
+    console.log('- Active section highlighting');
+    console.log('- Visit counter with localStorage');
+    console.log('- Print document button');
 });
 
-// Funciones adicionales para interactividad
-function toggleSection(sectionId) {
+// Additional functions for interactivity
+function showSectionInfo(sectionId) {
     const section = document.getElementById(sectionId);
     if (section) {
-        section.classList.toggle('collapsed');
+        alert(`This section contains information about: ${section.querySelector('h2').textContent}`);
     }
 }
 
-function printDocument() {
-    window.print();
-}
-
-// Exportar funciones para uso global
+// Make functions available globally
 window.YonkettPlan = {
-    toggleSection,
-    printDocument
+    showSectionInfo
 };
