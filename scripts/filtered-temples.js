@@ -1,21 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
-    console.log("Loading... " - JavaScript iniciado");
+    console.log("Page loaded - JavaScript started");
     
-    // Año actual
+    // Current year
     const currentYear = new Date();
     document.getElementById("currentyear").textContent = currentYear.getFullYear();
     
-    // ultima modificacion footer
+    // Last modified footer
     document.getElementById("lastModified").textContent = `Last Modification: ${document.lastModified}`;
 
-    // navegation settings
+    // Navigation setup
     setupNavigation();
     
-    // home all temples
+    // Display all temples
     displayTemples('home');
 });
 
-// alllllll templeees with link
+// Temples data
 const temples = [
     {
         templeName: "Aba Nigeria",
@@ -53,8 +53,8 @@ const temples = [
         imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg"
     },
     {
-        templeName: "Lima Perú",
-        location: "Lima, Perú",
+        templeName: "Lima Peru",
+        location: "Lima, Peru",
         dedicated: "1986, January, 10",
         area: 9600,
         imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/400x250/lima-peru-temple-evening-1075606-wallpaper.jpg"
@@ -75,15 +75,36 @@ const temples = [
     }
 ];
 
-// temple card
+// Create temple card
 function createTempleCard(temple) {
-    console.log(`🖼️ Creatind card temple...  ${temple.templeName}`);
+    console.log(`Creating card for: ${temple.templeName}`);
     
     const card = document.createElement('div');
     card.className = 'temple-card';
-        
+    
+    card.innerHTML = `
+        <h2>${temple.templeName}</h2>
+        <img src="${temple.imageUrl}" alt="${temple.templeName}" class="temple-image" loading="lazy"
+             onerror="console.error('ERROR IMAGE: Could not load: ${temple.imageUrl}')"
+             onload="console.log('IMAGE LOADED: ${temple.templeName}')">
+        <div class="temple-info"><strong>Location:</strong> ${temple.location}</div>
+        <div class="temple-info"><strong>Dedicated:</strong> ${temple.dedicated}</div>
+        <div class="temple-info"><strong>Area:</strong> ${temple.area.toLocaleString()} sq ft</div>
+    `;
+    
     return card;
-}    
+}
+
+// Filter temples
+function displayTemples(filter = 'home') {
+    console.log(`Applying filter: ${filter}`);
+    
+    const container = document.getElementById('temple-container');
+    if (!container) {
+        console.error("ERROR: Container 'temple-container' not found");
+        return;
+    }
+    
     container.innerHTML = '';
     
     let filteredTemples = temples;
@@ -109,3 +130,42 @@ function createTempleCard(temple) {
             break;
     }
     
+    console.log(`Filtered temples: ${filteredTemples.length}`);
+    
+    if (filteredTemples.length === 0) {
+        container.innerHTML = '<p class="no-results">No temples found matching the selected filter.</p>';
+        return;
+    }
+    
+    filteredTemples.forEach(temple => {
+        const card = createTempleCard(temple);
+        container.appendChild(card);
+    });
+}
+
+// Navigation setup
+function setupNavigation() {
+    console.log("Setting up navigation...");
+    
+    const navLinks = document.querySelectorAll('nav a');
+    console.log("Navigation links found:", navLinks.length);
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            // Remove active class
+            navLinks.forEach(l => l.classList.remove('active'));
+            
+            // Add active class
+            link.classList.add('active');
+            
+            // Get filter
+            const filter = link.dataset.filter;
+            console.log(`Selected filter: ${filter}`);
+            
+            // Show temples by filter
+            displayTemples(filter);
+        });
+    });
+}
