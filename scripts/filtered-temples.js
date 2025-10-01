@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    console.log("✅ Página cargada - JavaScript iniciado");
+    console.log("Loading... " - JavaScript iniciado");
     
     // Año actual
     const currentYear = new Date();
@@ -77,34 +77,13 @@ const temples = [
 
 // temple card
 function createTempleCard(temple) {
-    console.log(`🖼️ Creando tarjeta para: ${temple.templeName}`);
+    console.log(`🖼️ Creatind card temple...  ${temple.templeName}`);
     
     const card = document.createElement('div');
     card.className = 'temple-card';
-    
-    card.innerHTML = `
-        <h2>${temple.templeName}</h2>
-        <img src="${temple.imageUrl}" alt="${temple.templeName}" class="temple-image" loading="lazy"
-             onerror="console.error('❌ ERROR IMAGEN: No se pudo cargar: ${temple.imageUrl}')"
-             onload="console.log('✅ IMAGEN CARGADA: ${temple.templeName}')">
-        <div class="temple-info"><strong>Ubicación:</strong> ${temple.location}</div>
-        <div class="temple-info"><strong>Dedicado:</strong> ${temple.dedicated}</div>
-        <div class="temple-info"><strong>Área:</strong> ${temple.area.toLocaleString()} sq ft</div>
-    `;
-    
+        
     return card;
-}
-
-// Filter
-function displayTemples(filter = 'home') {
-    console.log(`🔍 Aplicando filtro: ${filter}`);
-    
-    const container = document.getElementById('temple-container');
-    if (!container) {
-        console.error("❌ ERROR: No se encontró el contenedor 'temple-container'");
-        return;
-    }
-    
+}    
     container.innerHTML = '';
     
     let filteredTemples = temples;
@@ -130,42 +109,3 @@ function displayTemples(filter = 'home') {
             break;
     }
     
-    console.log(`📊 Templos filtrados: ${filteredTemples.length}`);
-    
-    if (filteredTemples.length === 0) {
-        container.innerHTML = '<p class="no-results">No se encontraron templos que coincidan con el filtro seleccionado.</p>';
-        return;
-    }
-    
-    filteredTemples.forEach(temple => {
-        const card = createTempleCard(temple);
-        container.appendChild(card);
-    });
-}
-
-// Filter wirh navegation
-function setupNavigation() {
-    console.log("🔗 Configurando navegación...");
-    
-    const navLinks = document.querySelectorAll('nav a');
-    console.log("Enlaces de navegación encontrados:", navLinks.length);
-    
-    navLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            
-            // Remove class
-            navLinks.forEach(l => l.classList.remove('active'));
-            
-            // Add class
-            link.classList.add('active');
-            
-            // data-filter
-            const filter = link.dataset.filter;
-            console.log(`🎯 Filtro seleccionado: ${filter}`);
-            
-            // show temples bby filter
-            displayTemples(filter);
-        });
-    });
-}
