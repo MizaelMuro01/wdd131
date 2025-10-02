@@ -1,24 +1,32 @@
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    background-color: #f5f5f5;
     color: #333;
-    background-color: #f4f4f4;
-    padding: 20px;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    width: 100%;
 }
 
 .container {
-    max-width: 600px;
-    margin: 0 auto;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+    flex: 1;
 }
 
 h1 {
@@ -27,98 +35,155 @@ h1 {
     color: #2c3e50;
 }
 
-.form-group {
+.form-section {
+    background-color: white;
+    padding: 20px;
     margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+h2 {
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    color: #2c3e50;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
 }
 
-select, input[type="date"], input[type="text"], textarea {
+h2 small {
+    font-size: 0.8em;
+    color: #666;
+    font-weight: normal;
+}
+
+select, input[type="date"], textarea, input[type="text"] {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
+    margin-top: 5px;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 16px;
 }
 
-.rating {
+.rating-options {
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.rating-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stars {
+    font-size: 18px;
+    color: #ccc;
+    margin-bottom: 5px;
+    display: flex;
     gap: 5px;
 }
 
-.rating input {
-    display: none;
-}
-
-.rating label {
-    font-size: 30px;
-    color: #ddd;
+.star {
     cursor: pointer;
-    transition: color 0.2s;
+    padding: 5px;
+    transition: color 0.3s;
 }
 
-.rating input:checked ~ label,
-.rating label:hover,
-.rating label:hover ~ label {
-    color: #f1c40f;
+.star:hover,
+.star.active {
+    color: #2c3e50;
 }
 
-.features {
+.circles {
     display: flex;
-    flex-direction: column;
     gap: 10px;
 }
 
-.features input[type="checkbox"] {
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.circle:hover,
+.circle.active {
+    background-color: #2c3e50;
+    border-color: #2c3e50;
+}
+
+.features {
+    margin-top: 10px;
+}
+
+.feature-item {
+    margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
     margin-right: 10px;
 }
 
-.features label {
-    display: inline;
-    font-weight: normal;
+.submit-section {
+    text-align: center;
+    margin-top: 30px;
 }
 
-input[type="submit"] {
-    background-color: #3498db;
+button {
+    background-color: #2c3e50;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 25px;
     font-size: 16px;
     border-radius: 4px;
     cursor: pointer;
-    width: 100%;
     transition: background-color 0.3s;
 }
 
-input[type="submit"]:hover {
-    background-color: #2980b9;
+button:hover {
+    background-color: #1a252f;
 }
 
 footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px 0;
     text-align: center;
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 1px solid #ddd;
-    color: #7f8c8d;
+    width: 100%;
+    margin-top: auto;
 }
 
-/* Responsive */
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.last-modified {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #bdc3c7;
+}
+
+/* Responsive Design */
 @media (max-width: 600px) {
-    body {
-        padding: 10px;
+    .rating-options {
+        flex-direction: column;
+        gap: 15px;
     }
     
     .container {
-        padding: 15px;
+        padding: 0 10px;
+        margin: 10px auto;
     }
     
-    .rating label {
-        font-size: 25px;
+    .form-section {
+        padding: 15px;
     }
 }
