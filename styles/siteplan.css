@@ -96,7 +96,6 @@ main {
 .scenario-item {
     background: #F5F5F5;
     padding: 1.5rem;
-    border-left: 4px solid #FA0001;
 }
 
 .scenario-item h3 {
