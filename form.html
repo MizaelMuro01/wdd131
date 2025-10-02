@@ -24,21 +24,24 @@
             <!-- Overall Rating -->
             <div class="form-section">
                 <h2>Overall Rating</h2>
-                <div class="rating-display">
-                    <div class="stars-display">✗ ✗✗ ✗✗✗ ✗✗✗✗ ✗✗✗✗✗</div>
-                    <div class="circles-display">○ ○ ○ ○ ○</div>
+                <div class="rating-buttons">
+                    <button type="button" class="rating-btn" data-value="1">
+                        <div class="stars">★</div>
+                    </button>
+                    <button type="button" class="rating-btn" data-value="2">
+                        <div class="stars">★★</div>
+                    </button>
+                    <button type="button" class="rating-btn" data-value="3">
+                        <div class="stars">★★★</div>
+                    </button>
+                    <button type="button" class="rating-btn" data-value="4">
+                        <div class="stars">★★★★</div>
+                    </button>
+                    <button type="button" class="rating-btn" data-value="5">
+                        <div class="stars">★★★★★</div>
+                    </button>
                 </div>
-                <div class="rating-input">
-                    <label>Select rating:</label>
-                    <select name="rating" required>
-                        <option value="" disabled selected>Select rating</option>
-                        <option value="1">1 Star</option>
-                        <option value="2">2 Stars</option>
-                        <option value="3">3 Stars</option>
-                        <option value="4">4 Stars</option>
-                        <option value="5">5 Stars</option>
-                    </select>
-                </div>
+                <input type="hidden" id="ratingValue" name="rating" required>
             </div>
             
             <!-- Date of Installation -->

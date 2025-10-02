@@ -39,6 +39,25 @@ function populateProducts() {
     });
 }
 
+// Rating functionality
+function setupRating() {
+    const ratingButtons = document.querySelectorAll('.rating-btn');
+    const ratingInput = document.getElementById('ratingValue');
+    
+    ratingButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove selected class from all buttons
+            ratingButtons.forEach(btn => btn.classList.remove('selected'));
+            
+            // Add selected class to clicked button
+            this.classList.add('selected');
+            
+            // Set the rating value
+            ratingInput.value = this.getAttribute('data-value');
+        });
+    });
+}
+
 // Set today's date as default
 function setTodayDate() {
     const today = new Date();
@@ -49,5 +68,6 @@ function setTodayDate() {
 // Initialize the application
 document.addEventListener('DOMContentLoaded', function() {
     populateProducts();
+    setupRating();
     setTodayDate();
 });
