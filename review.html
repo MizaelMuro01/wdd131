@@ -3,25 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Review Confirmation</title>
-    <link rel="stylesheet" href="styles/form.css">
+    <title>Review Submitted</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    
     <div class="container">
-        <h1>Thank You for Your Review!</h1>
-        <p>Your review has been successfully submitted.</p>
-        <p id="reviewCount">Number of reviews submitted: </p>
-        <a href="form.html">Submit another review</a>
+        <div class="form-section">
+            <h2>Thank You!</h2>
+            <p>Your review has been submitted successfully.</p>
+            <p id="reviewCount"></p>
+            <a href="index.html">Submit another review</a>
+        </div>
     </div>
     
+    <footer>
+        <div class="footer-content">
+            <p>©2024 💬 Rubia Magdelena Francesco 💬</p>
+            <p>Madagascar</p>
+            <p class="last-modified">Last Modification: 02/26/2024 13:56:10</p>
+        </div>
+    </footer>
+    
     <script>
-        // Review counter localStorage
+        // Update review counter
         let reviewCount = localStorage.getItem('reviewCount') || 0;
         reviewCount = parseInt(reviewCount) + 1;
         localStorage.setItem('reviewCount', reviewCount);
         
-        // Display counter
-        document.getElementById('reviewCount').textContent += reviewCount;
+        // Display the counter
+        document.getElementById('reviewCount').textContent = 'Total reviews submitted: ' + reviewCount;
     </script>
 </body>
 </html>
