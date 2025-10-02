@@ -41,15 +41,15 @@ function populateProducts() {
 
 // Rating functionality
 function setupRating() {
-    const ratingButtons = document.querySelectorAll('.rating-btn');
+    const ratingCircles = document.querySelectorAll('.rating-circle');
     const ratingInput = document.getElementById('ratingValue');
     
-    ratingButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // Remove selected class from all buttons
-            ratingButtons.forEach(btn => btn.classList.remove('selected'));
+    ratingCircles.forEach(circle => {
+        circle.addEventListener('click', function() {
+            // Remove selected class from all circles
+            ratingCircles.forEach(c => c.classList.remove('selected'));
             
-            // Add selected class to clicked button
+            // Add selected class to clicked circle
             this.classList.add('selected');
             
             // Set the rating value

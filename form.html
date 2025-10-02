@@ -24,22 +24,27 @@
             <!-- Overall Rating -->
             <div class="form-section">
                 <h2>Overall Rating</h2>
-                <div class="rating-buttons">
-                    <button type="button" class="rating-btn" data-value="1">
-                        <div class="stars">★</div>
-                    </button>
-                    <button type="button" class="rating-btn" data-value="2">
-                        <div class="stars">★★</div>
-                    </button>
-                    <button type="button" class="rating-btn" data-value="3">
-                        <div class="stars">★★★</div>
-                    </button>
-                    <button type="button" class="rating-btn" data-value="4">
-                        <div class="stars">★★★★</div>
-                    </button>
-                    <button type="button" class="rating-btn" data-value="5">
-                        <div class="stars">★★★★★</div>
-                    </button>
+                <div class="rating-container">
+                    <div class="star-button-group">
+                        <div class="star-display">★</div>
+                        <button type="button" class="rating-circle" data-value="1"></button>
+                    </div>
+                    <div class="star-button-group">
+                        <div class="star-display">★★</div>
+                        <button type="button" class="rating-circle" data-value="2"></button>
+                    </div>
+                    <div class="star-button-group">
+                        <div class="star-display">★★★</div>
+                        <button type="button" class="rating-circle" data-value="3"></button>
+                    </div>
+                    <div class="star-button-group">
+                        <div class="star-display">★★★★</div>
+                        <button type="button" class="rating-circle" data-value="4"></button>
+                    </div>
+                    <div class="star-button-group">
+                        <div class="star-display">★★★★★</div>
+                        <button type="button" class="rating-circle" data-value="5"></button>
+                    </div>
                 </div>
                 <input type="hidden" id="ratingValue" name="rating" required>
             </div>
