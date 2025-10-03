@@ -24,25 +24,31 @@
             </div>
 
             <!------------------------------------------------------------- overall rating ---------------------->
-            <!-- Overall Rating -->
             <div class="form-section">
                 <h2>Overall Rating</h2>
-                <div class="stars">
-                    <input type="radio" id="fivestar" name="stars" value="5" required>
-                    <label for="fivestar">★★★★★</label>
-
-                    <input type="radio" id="fourstar" name="stars" value="4" required>
-                    <label for="fourstar">★★★★</label>
-
-                    <input type="radio" id="threestar" name="stars" value="3" required>
-                    <label for="threestar">★★★</label>
-
-                    <input type="radio" id="twostar" name="stars" value="2" required>
-                    <label for="twostar">★★</label>
-
-                    <input type="radio" id="onestar" name="stars" value="1" required>
-                    <label for="onestar">★</label>
+                <div class="rating-container">
+                    <div class="rating-item">
+                        <div class="stars">★</div>
+                        <button type="button" class="circle-btn" data-value="1"></button>
+                    </div>
+                    <div class="rating-item">
+                        <div class="stars">★★</div>
+                        <button type="button" class="circle-btn" data-value="2"></button>
+                    </div>
+                    <div class="rating-item">
+                        <div class="stars">★★★</div>
+                        <button type="button" class="circle-btn" data-value="3"></button>
+                    </div>
+                    <div class="rating-item">
+                        <div class="stars">★★★★</div>
+                        <button type="button" class="circle-btn" data-value="4"></button>
+                    </div>
+                    <div class="rating-item">
+                        <div class="stars">★★★★★</div>
+                        <button type="button" class="circle-btn" data-value="5"></button>
+                    </div>
                 </div>
+                <input type="hidden" id="ratingValue" name="rating" required>
             </div>
             <!------------------------------------------------------------------- date ----------------------------->
             <div class="form-section">
@@ -75,8 +81,9 @@
 
             <!------------------------------------------------------------- written review ------------------>
             <div class="form-section">
-                <h2>Comments (Optional)</h2>
-                <textarea id="Comments" name="Comments" rows="4" placeholder="Comments"></textarea>
+                <h2>Make a comment</h2>
+                <textarea id="Comment" name="Comment" rows="4"
+                    placeholder="Comment"></textarea>
             </div>
 
             <!------------------------------------------------------------------- user name --------------------->

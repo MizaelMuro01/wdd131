@@ -78,31 +78,9 @@ select, input[type="date"], textarea, input[type="text"] {
 }
 
 .stars {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: left;
-    margin-top: 10px;
-}
-
-.stars input[type="radio"] {
-    display: none;
-}
-
-.stars > label {
-    color: #ccc;
-    font-size: 1.5rem;
-    margin-right: 10px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-}
-
-.stars > label:hover {
-    color: #ffc107;
-}
-
-.stars input:checked ~ label {
-    color: #ffc107;
+    font-size: 12px;
+    color: #000;
+    height: 15px;
 }
 
 .circle-btn {
