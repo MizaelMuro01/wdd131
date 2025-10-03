@@ -90,5 +90,5 @@ document.addEventListener('DOMContentLoaded', function() {
     populateProducts();
     setupRating();
     setTodayDate();
-    updateLastModified(); // Añadida esta línea
+    updateLastModified();
 });
