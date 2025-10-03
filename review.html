@@ -23,12 +23,32 @@
     <footer>
         <div class="footer-content">
             <p>©2025 Mizael Aldebaran Muro Morales</p>
-            <p>Madagascar</p>
+            <p>Mexico</p>
             <p class="last-modified">Last Modification: 02/26/2024 13:56:10</p>
         </div>
     </footer>
     
     <script>
+        // Update last modified date
+        function updateLastModified() {
+            const now = new Date();
+            const formattedDate = now.toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit'
+            }) + ' ' + now.toLocaleTimeString('en-US', {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false
+            });
+            
+            const lastModifiedElement = document.querySelector('.last-modified');
+            if (lastModifiedElement) {
+                lastModifiedElement.textContent = 'Last Modification: ' + formattedDate;
+            }
+        }
+
         // review counter
         let reviewCount = localStorage.getItem('reviewCount') || 0;
         reviewCount = parseInt(reviewCount) + 1;
@@ -36,6 +56,9 @@
         
         // display the counter
         document.getElementById('reviewCount').textContent = 'Total reviews submitted: ' + reviewCount;
+        
+        // update last modified date
+        updateLastModified();
     </script>
 </body>
 </html>
