@@ -14,27 +14,27 @@
     <div class="container">
         <div class="form-section">
             <h2>Thank You!</h2>
-            <p>Your review has been submitted successfully.</p>
+            <p>Your review has been submitted successfully</p>
             <p id="reviewCount"></p>
-            <a href="index.html">Submit another review</a>
+            <a href="form.html">Submit another review</a>
         </div>
     </div>
     
     <footer>
         <div class="footer-content">
-            <p>©2024 💬 Rubia Magdelena Francesco 💬</p>
+            <p>©2025 Mizael Aldebaran Muro Morales</p>
             <p>Madagascar</p>
             <p class="last-modified">Last Modification: 02/26/2024 13:56:10</p>
         </div>
     </footer>
     
     <script>
-        // Update review counter
+        // review counter
         let reviewCount = localStorage.getItem('reviewCount') || 0;
         reviewCount = parseInt(reviewCount) + 1;
         localStorage.setItem('reviewCount', reviewCount);
         
-        // Display the counter
+        // display the counter
         document.getElementById('reviewCount').textContent = 'Total reviews submitted: ' + reviewCount;
     </script>
 </body>

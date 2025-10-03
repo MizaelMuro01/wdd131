@@ -15,7 +15,7 @@
 
     <div class="container">
         <form id="reviewForm" method="get" action="review.html">
-            <!-- Product Name -->
+            <!----------------------------------------------------------- product name ------------------------->
             <div class="form-section">
                 <h2>Product Name</h2>
                 <select id="productName" name="productName" required>
@@ -23,40 +23,34 @@
                 </select>
             </div>
 
+            <!------------------------------------------------------------- overall rating ---------------------->
             <!-- Overall Rating -->
             <div class="form-section">
                 <h2>Overall Rating</h2>
-                <div class="rating-container">
-                    <div class="rating-item">
-                        <div class="stars">★</div>
-                        <button type="button" class="circle-btn" data-value="1"></button>
-                    </div>
-                    <div class="rating-item">
-                        <div class="stars">★★</div>
-                        <button type="button" class="circle-btn" data-value="2"></button>
-                    </div>
-                    <div class="rating-item">
-                        <div class="stars">★★★</div>
-                        <button type="button" class="circle-btn" data-value="3"></button>
-                    </div>
-                    <div class="rating-item">
-                        <div class="stars">★★★★</div>
-                        <button type="button" class="circle-btn" data-value="4"></button>
-                    </div>
-                    <div class="rating-item">
-                        <div class="stars">★★★★★</div>
-                        <button type="button" class="circle-btn" data-value="5"></button>
-                    </div>
+                <div class="stars">
+                    <input type="radio" id="fivestar" name="stars" value="5" required>
+                    <label for="fivestar">★★★★★</label>
+
+                    <input type="radio" id="fourstar" name="stars" value="4" required>
+                    <label for="fourstar">★★★★</label>
+
+                    <input type="radio" id="threestar" name="stars" value="3" required>
+                    <label for="threestar">★★★</label>
+
+                    <input type="radio" id="twostar" name="stars" value="2" required>
+                    <label for="twostar">★★</label>
+
+                    <input type="radio" id="onestar" name="stars" value="1" required>
+                    <label for="onestar">★</label>
                 </div>
-                <input type="hidden" id="ratingValue" name="rating" required>
             </div>
-            <!-- Date of Installation -->
+            <!------------------------------------------------------------------- date ----------------------------->
             <div class="form-section">
                 <h2>Date of Installation</h2>
                 <input type="date" id="installationDate" name="installationDate" required>
             </div>
 
-            <!-- Features -->
+            <!-------------------------------------------------------------------- features ------------------------------->
             <div class="form-section">
                 <h2>Which features did you find useful in the product?<br><small>(Check all that apply)</small></h2>
                 <div class="features">
@@ -79,20 +73,19 @@
                 </div>
             </div>
 
-            <!-- Written Review -->
+            <!------------------------------------------------------------- written review ------------------>
             <div class="form-section">
-                <h2>Written Review (Optional)</h2>
-                <textarea id="writtenReview" name="writtenReview" rows="4"
-                    placeholder="Write your review here..."></textarea>
+                <h2>Comments (Optional)</h2>
+                <textarea id="Comments" name="Comments" rows="4" placeholder="Comments"></textarea>
             </div>
 
-            <!-- User Name -->
+            <!------------------------------------------------------------------- user name --------------------->
             <div class="form-section">
                 <h2>Your Name (Optional)</h2>
                 <input type="text" id="userName" name="userName">
             </div>
 
-            <!-- Submit Button -->
+            <!---------------------------------------------------------------------- submit button -------------->
             <div class="submit-section">
                 <button type="submit">Post Review</button>
             </div>
@@ -101,8 +94,8 @@
 
     <footer>
         <div class="footer-content">
-            <p>©2024 💬 Rubia Magdelena Francesco 💬</p>
-            <p>Madagascar</p>
+            <p>©2025 Mizael Aldebaran Muro Morales</p>
+            <p>Mexico</p>
             <p class="last-modified">Last Modification: 02/26/2024 13:56:10</p>
         </div>
     </footer>
