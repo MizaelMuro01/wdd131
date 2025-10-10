@@ -194,8 +194,25 @@ body {
     transform: scale(1.05);
 }
 
+/* Content Page Styles */
+.content-page {
+    padding: 3rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
+.content-page h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
 
+.content-text {
+    background-color: #282828;
+    border-radius: 8px;
+    padding: 3rem;
+}
 
 /* Additional styles for terms page */
 .language-section {
@@ -223,6 +240,18 @@ body {
     padding-left: 1rem;
 }
 
+.language-section h4 {
+    color: #FA0001;
+    margin: 1.5rem 0 0.8rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.language-section p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
 .language-section ul {
     margin: 1rem 0 1rem 2rem;
 }
@@ -230,10 +259,30 @@ body {
 .language-section li {
     margin-bottom: 0.8rem;
     line-height: 1.6;
+    position: relative;
+    padding-left: 0.5rem;
+}
+
+.language-section li:before {
+    content: "•";
+    color: #FA0001;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.language-section ul ul {
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
 }
 
 .language-section strong {
     color: white;
+}
+
+.language-section li strong {
+    color: #FA0001;
 }
 
 .last-update {
@@ -255,67 +304,6 @@ body {
     text-decoration: underline;
 }
 
-/* Responsive for terms page */
-@media (max-width: 768px) {
-    .language-section h2 {
-        font-size: 1.5rem;
-    }
-    
-    .language-section h3 {
-        font-size: 1.2rem;
-    }
-    
-    .language-section ul {
-        margin-left: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .language-section h2 {
-        font-size: 1.3rem;
-    }
-    
-    .language-section {
-        margin-bottom: 2rem;
-        padding-bottom: 1.5rem;
-    }
-}
-
-
-
-
-/* Additional styles for privacy policy page */
-.language-section h4 {
-    color: #FA0001;
-    margin: 1.5rem 0 0.8rem 0;
-    font-size: 1.1rem;
-    font-weight: 600;
-}
-
-.language-section ul ul {
-    margin-left: 1.5rem;
-    margin-top: 0.5rem;
-}
-
-.language-section li strong {
-    color: #FA0001;
-}
-
-/* Enhanced list styling for privacy policy */
-.language-section ul li {
-    position: relative;
-    padding-left: 0.5rem;
-}
-
-.language-section ul li:before {
-    content: "•";
-    color: #FA0001;
-    font-weight: bold;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
-}
-
 /* Better spacing for nested content */
 .language-section p + ul {
     margin-top: 0.5rem;
@@ -332,31 +320,6 @@ body {
     border-radius: 4px;
     margin: 2rem 0 1rem 0;
 }
-
-/* Responsive for privacy policy */
-@media (max-width: 768px) {
-    .language-section h4 {
-        font-size: 1rem;
-    }
-    
-    .language-section h3 {
-        padding: 0.8rem;
-        font-size: 1.2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .language-section h3 {
-        padding: 0.6rem;
-        font-size: 1.1rem;
-    }
-    
-    .language-section h4 {
-        font-size: 0.95rem;
-    }
-}
-
-
 
 /* Footer */
 .footer {
@@ -489,6 +452,31 @@ body {
     .store-image {
         height: 70px;
     }
+    
+    .content-text {
+        padding: 2rem;
+    }
+    
+    .language-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .language-section h3 {
+        font-size: 1.2rem;
+    }
+    
+    .language-section ul {
+        margin-left: 1rem;
+    }
+    
+    .language-section h4 {
+        font-size: 1rem;
+    }
+    
+    .language-section h3 {
+        padding: 0.8rem;
+        font-size: 1.2rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -519,5 +507,27 @@ body {
     .faq-question {
         padding: 0.75rem;
         font-size: 1rem;
+    }
+    
+    .content-text {
+        padding: 1.5rem;
+    }
+    
+    .language-section h2 {
+        font-size: 1.3rem;
+    }
+    
+    .language-section {
+        margin-bottom: 2rem;
+        padding-bottom: 1.5rem;
+    }
+    
+    .language-section h3 {
+        padding: 0.6rem;
+        font-size: 1.1rem;
+    }
+    
+    .language-section h4 {
+        font-size: 0.95rem;
     }
 }

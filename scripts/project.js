@@ -22,22 +22,24 @@ const faqData = [
 function createFAQ() {
     const faqContainer = document.querySelector('.faq-container');
     
-    faqData.forEach((item, index) => {
-        const faqItem = document.createElement('div');
-        faqItem.className = 'faq-item';
-        
-        faqItem.innerHTML = `
-            <button class="faq-question">
-                ${item.question}
-                <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer">
-                <p>${item.answer}</p>
-            </div>
-        `;
-        
-        faqContainer.appendChild(faqItem);
-    });
+    if (faqContainer) {
+        faqData.forEach((item, index) => {
+            const faqItem = document.createElement('div');
+            faqItem.className = 'faq-item';
+            
+            faqItem.innerHTML = `
+                <button class="faq-question">
+                    ${item.question}
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>${item.answer}</p>
+                </div>
+            `;
+            
+            faqContainer.appendChild(faqItem);
+        });
+    }
 }
 
 // Toggle FAQ answers
@@ -67,8 +69,25 @@ function setupFAQToggle() {
     });
 }
 
+// Update date automatically
+function updateDates() {
+    const updateDateElements = document.querySelectorAll('#update-date');
+    const currentDate = new Date().toLocaleDateString('es-ES');
+    
+    updateDateElements.forEach(element => {
+        element.textContent = currentDate;
+    });
+    
+    // Update current year in footer
+    const currentYearElement = document.getElementById('current-year');
+    if (currentYearElement) {
+        currentYearElement.textContent = new Date().getFullYear();
+    }
+}
+
 // Initialize the page
 document.addEventListener('DOMContentLoaded', function() {
     createFAQ();
     setupFAQToggle();
+    updateDates();
 });
