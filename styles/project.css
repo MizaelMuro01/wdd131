@@ -284,6 +284,80 @@ body {
 
 
 
+/* Additional styles for privacy policy page */
+.language-section h4 {
+    color: #FA0001;
+    margin: 1.5rem 0 0.8rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.language-section ul ul {
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.language-section li strong {
+    color: #FA0001;
+}
+
+/* Enhanced list styling for privacy policy */
+.language-section ul li {
+    position: relative;
+    padding-left: 0.5rem;
+}
+
+.language-section ul li:before {
+    content: "•";
+    color: #FA0001;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* Better spacing for nested content */
+.language-section p + ul {
+    margin-top: 0.5rem;
+}
+
+.language-section h3 + p {
+    margin-bottom: 1rem;
+}
+
+/* Highlight important sections */
+.language-section h3 {
+    background-color: rgba(250, 0, 1, 0.1);
+    padding: 1rem;
+    border-radius: 4px;
+    margin: 2rem 0 1rem 0;
+}
+
+/* Responsive for privacy policy */
+@media (max-width: 768px) {
+    .language-section h4 {
+        font-size: 1rem;
+    }
+    
+    .language-section h3 {
+        padding: 0.8rem;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .language-section h3 {
+        padding: 0.6rem;
+        font-size: 1.1rem;
+    }
+    
+    .language-section h4 {
+        font-size: 0.95rem;
+    }
+}
+
+
+
 /* Footer */
 .footer {
     background-color: #2b2b2b;
