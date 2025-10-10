@@ -194,6 +194,96 @@ body {
     transform: scale(1.05);
 }
 
+
+
+
+/* Additional styles for terms page */
+.language-section {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #666;
+}
+
+.language-section:last-of-type {
+    border-bottom: none;
+}
+
+.language-section h2 {
+    color: #FA0001;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.language-section h3 {
+    color: white;
+    margin: 2rem 0 1rem 0;
+    font-size: 1.3rem;
+    border-left: 3px solid #FA0001;
+    padding-left: 1rem;
+}
+
+.language-section ul {
+    margin: 1rem 0 1rem 2rem;
+}
+
+.language-section li {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+.language-section strong {
+    color: white;
+}
+
+.last-update {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #666;
+    color: #FA0001;
+    font-size: 1.1rem;
+}
+
+/* Links in content */
+.content-text a {
+    color: #FA0001;
+    text-decoration: none;
+}
+
+.content-text a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive for terms page */
+@media (max-width: 768px) {
+    .language-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .language-section h3 {
+        font-size: 1.2rem;
+    }
+    
+    .language-section ul {
+        margin-left: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .language-section h2 {
+        font-size: 1.3rem;
+    }
+    
+    .language-section {
+        margin-bottom: 2rem;
+        padding-bottom: 1.5rem;
+    }
+}
+
+
+
+
 /* Footer */
 .footer {
     background-color: #2b2b2b;
