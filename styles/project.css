@@ -63,7 +63,7 @@ body {
     display: block;
 }
 
-/* Info Section - UPDATED: No borders and hover effect */
+/* Info Section */
 .info-section {
     padding: 3rem 1rem;
     background-color: #282828;
@@ -228,15 +228,15 @@ body {
     padding: 3rem;
 }
 
-/* Language Sections */
+/* Language Sections - CLEAN VERSION */
 .language-section {
     margin-bottom: 3rem;
     padding-bottom: 2rem;
-    border-bottom: 1px solid #444;
 }
 
 .language-section:last-of-type {
-    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .language-section h2 {
@@ -252,8 +252,7 @@ body {
     margin: 2rem 0 1rem 0;
     font-size: 1.3rem;
     font-weight: bold;
-    border-left: 3px solid white;
-    padding-left: 1rem;
+    padding-left: 0;
 }
 
 .language-section h4 {
@@ -269,27 +268,22 @@ body {
 }
 
 .language-section ul {
-    margin: 1rem 0 1rem 2rem;
+    margin: 1rem 0 1rem 1rem;
 }
 
 .language-section li {
     margin-bottom: 0.8rem;
     line-height: 1.6;
-    position: relative;
-    padding-left: 0.5rem;
+    padding-left: 0;
 }
 
+/* REMOVED BULLET POINTS AND BORDERS */
 .language-section li:before {
-    content: "•";
-    color: white;
-    font-weight: bold;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
+    content: none;
 }
 
 .language-section ul ul {
-    margin-left: 1.5rem;
+    margin-left: 1rem;
     margin-top: 0.5rem;
 }
 
@@ -306,7 +300,6 @@ body {
     text-align: center;
     margin-top: 2rem;
     padding-top: 2rem;
-    border-top: 1px solid #444;
     color: white;
     font-size: 1.1rem;
 }
@@ -335,7 +328,6 @@ body {
     background-color: #2b2b2b;
     padding: 2rem 1rem;
     margin-top: 2rem;
-    border-top: 1px solid #444;
 }
 
 .footer-content {
@@ -482,7 +474,7 @@ body {
     }
     
     .language-section ul {
-        margin-left: 1rem;
+        margin-left: 0.5rem;
     }
     
     .language-section h4 {
@@ -538,7 +530,6 @@ body {
     }
     
     .language-section h3 {
-        padding: 0.6rem;
         font-size: 1.1rem;
     }
     
