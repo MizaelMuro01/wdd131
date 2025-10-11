@@ -598,14 +598,7 @@ body {
         padding: 10px 20px;
         font-size: 0.9rem;
         min-width: 200px;
+        background-color: #FA0001;
+        color: #ffffff;
     }
-}
-
-/* Solo esta pequeña corrección para botones */
-button, .btn, input[type="submit"] {
-    background-color: #FA0001;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
 }
