@@ -304,6 +304,22 @@ body {
     font-size: 1.1rem;
 }
 
+/*logoooo arriba terms y privacy */
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.header-logo {
+    height: 80px;
+    width: auto;
+    display: block;
+}
+
 /* Links in content */
 .content-text a {
     color: #FA0001;
