@@ -2,19 +2,19 @@
 const faqData = [
     {
         question: "How does the platform work?",
-        answer: "Lorem ipsum dolor sit amet consectetur adipiscing elit. Praesent rutrum odio ac efficitur faucibus!"
+        answer: "Yonkett is like a custom hub made just for your specific car model. It’s not just about storing your car info—it connects you with other owners who have the exact same ride. Share tips, get advice, and find parts that actually fit your model from people who get it."
     },
     {
         question: "Why there is not a marketplace?",
-        answer: "Lorem ipsum dolor sit amet consectetur adipiscing elit. Praesent rutrum odio ac efficitur faucibus!"
+        answer: "We’re still putting the final touches on our marketplace to make sure it’s reliable and truly useful. Right now, we're counting on our community to help us shape it into something everyone will love. Your input really makes a difference!"
     },
     {
         question: "Can I have two or more car's profile?",
-        answer: "Lorem ipsum dolor sit amet consectetur adipiscing elit. Praesent rutrum odio ac efficitur faucibus!"
+        answer: "Yes! Managing more than one car is a premium feature. Upgrade your account, and you’ll be able to keep track of all your vehicles in one spot—each with its own maintenance history and model-specific community. Check out the app to see all the cool perks that come with premium."
     },
     {
         question: "When can I have the complete app?",
-        answer: "Lorem ipsum dolor sit amet consectetur adipiscing elit. Praesent rutrum odio ac efficitur faucibus!"
+        answer: "We’re working hard to roll out the full experience soon. We don’t have an exact date just yet, but follow us on social media—we post updates, sneak peeks, and news there all the time. We’re building this thing together!"
     }
 ];
 
