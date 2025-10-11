@@ -327,8 +327,16 @@ body {
     margin-bottom: 1rem;
 }
 
-/* BOTONES SIMPLES - SOLO ROJO Y TEXTO BLANCO */
-.language-btn, .delete-btn, .confirm-btn {
+/* Language Buttons - NUEVO PARA ACCOUNT.HTML */
+.language-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.language-btn {
     background-color: #FA0001;
     color: white;
     border: none;
@@ -344,18 +352,10 @@ body {
     min-width: 200px;
 }
 
-.language-btn:hover, .delete-btn:hover, .confirm-btn:hover {
+.language-btn:hover {
     background-color: #d90000;
     transform: translateY(-2px);
-}
-
-/* Language Buttons - NUEVO PARA ACCOUNT.HTML */
-.language-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin: 2rem 0;
-    flex-wrap: wrap;
+    box-shadow: 0 4px 8px rgba(250, 0, 1, 0.3);
 }
 
 /* Footer */
@@ -594,7 +594,7 @@ body {
         height: 60px;
     }
     
-    .language-btn, .delete-btn, .confirm-btn {
+    .language-btn {
         padding: 10px 20px;
         font-size: 0.9rem;
         min-width: 200px;
