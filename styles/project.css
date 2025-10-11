@@ -327,62 +327,8 @@ body {
     margin-bottom: 1rem;
 }
 
-/* CORRECCIÓN PARA BOTONES - ESTILOS GENERALES */
-button, .btn, input[type="submit"], input[type="button"], [class*="button"] {
-    background-color: #FA0001 !important;
-    color: white !important;
-    border: 2px solid #d90000 !important;
-    border-radius: 8px;
-    padding: 12px 24px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: inline-block;
-    text-align: center;
-    text-decoration: none;
-}
-
-button:hover, .btn:hover, input[type="submit"]:hover, input[type="button"]:hover, [class*="button"]:hover {
-    background-color: #d90000 !important;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(250, 0, 1, 0.3);
-}
-
-/* Botones específicos para eliminación de cuenta (más destacados) */
-.delete-button, .confirm-button, .cancel-button {
-    background-color: #FA0001 !important;
-    color: white !important;
-    border: 2px solid #ff4444 !important;
-    margin: 10px 5px;
-    min-width: 150px;
-}
-
-.delete-button:hover, .confirm-button:hover {
-    background-color: #cc0000 !important;
-    border-color: #cc0000 !important;
-}
-
-.cancel-button {
-    background-color: #666 !important;
-    border-color: #888 !important;
-}
-
-.cancel-button:hover {
-    background-color: #555 !important;
-    border-color: #777 !important;
-}
-
-/* Language Buttons - NUEVO PARA ACCOUNT.HTML */
-.language-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin: 2rem 0;
-    flex-wrap: wrap;
-}
-
-.language-btn {
+/* BOTONES SIMPLES - SOLO ROJO Y TEXTO BLANCO */
+.language-btn, .delete-btn, .confirm-btn {
     background-color: #FA0001;
     color: white;
     border: none;
@@ -398,10 +344,18 @@ button:hover, .btn:hover, input[type="submit"]:hover, input[type="button"]:hover
     min-width: 200px;
 }
 
-.language-btn:hover {
+.language-btn:hover, .delete-btn:hover, .confirm-btn:hover {
     background-color: #d90000;
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(250, 0, 1, 0.3);
+}
+
+/* Language Buttons - NUEVO PARA ACCOUNT.HTML */
+.language-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
 }
 
 /* Footer */
@@ -579,13 +533,6 @@ button:hover, .btn:hover, input[type="submit"]:hover, input[type="button"]:hover
     .language-btn {
         width: 250px;
     }
-    
-    /* Botones responsivos */
-    button, .btn, input[type="submit"], input[type="button"], [class*="button"] {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-        min-width: 140px;
-    }
 }
 
 @media (max-width: 480px) {
@@ -647,21 +594,9 @@ button:hover, .btn:hover, input[type="submit"]:hover, input[type="button"]:hover
         height: 60px;
     }
     
-    .language-btn {
+    .language-btn, .delete-btn, .confirm-btn {
         padding: 10px 20px;
         font-size: 0.9rem;
         min-width: 200px;
-    }
-    
-    /* Botones más pequeños en móviles */
-    button, .btn, input[type="submit"], input[type="button"], [class*="button"] {
-        padding: 8px 16px;
-        font-size: 0.85rem;
-        min-width: 120px;
-    }
-    
-    .delete-button, .confirm-button, .cancel-button {
-        min-width: 120px;
-        margin: 5px;
     }
 }
